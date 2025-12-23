@@ -1,0 +1,38 @@
+[project]
+name = "ai-research-trends-rag"
+version = "1.0.0"
+description = "AI Research Trends Discovery Platform"
+requires-python = ">=3.11"
+dependencies = [
+    "requests==2.31.0",
+    "python-dotenv==1.0.0",
+    "feedparser==6.0.10",
+    "httpx==0.26.0",
+    "pyyaml==6.0.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest==7.4.3",
+    "pytest-asyncio==0.23.2",
+    "ruff==0.1.9",
+    "mypy==1.8.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
