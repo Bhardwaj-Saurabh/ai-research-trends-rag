@@ -1,0 +1,28 @@
+# Example queries for the frontend
+# These can be customized based on your research interests
+
+basic_queries:
+  - "What are the latest developments in transformer models?"
+  - "Explain vision transformers and their applications"
+  - "What are emerging trends in large language models?"
+  - "How is reinforcement learning being used in robotics?"
+  - "What are the recent advances in multi-modal learning?"
+  - "Explain self-supervised learning techniques"
+
+trend_queries:
+  - "What are the challenges in training large neural networks?"
+  - "How are diffusion models being used for image generation?"
+  - "What are the latest developments in few-shot learning?"
+  - "Explain recent progress in neural architecture search"
+
+comparison_queries:
+  - "Compare BERT and GPT architectures"
+  - "What are the differences between CNNs and vision transformers?"
+  - "Compare supervised and self-supervised learning approaches"
+  - "How do GAN and diffusion models differ for image generation?"
+
+technical_queries:
+  - "How do attention mechanisms work in neural networks?"
+  - "Explain the role of normalization in deep learning"
+  - "What are the benefits of sparse attention in transformers?"
+  - "How does curriculum learning improve model training?"

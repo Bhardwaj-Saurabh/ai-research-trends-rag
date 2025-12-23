@@ -1,0 +1,54 @@
+# arXiv categories for AI research
+# Reference: https://arxiv.org/category_taxonomy
+
+computer_science:
+  cs.AI:
+    name: "Artificial Intelligence"
+    description: "Covers all areas of AI except Vision, Robotics, Learning, Multiagent Systems"
+
+  cs.CL:
+    name: "Computation and Language"
+    description: "Natural language processing, computational linguistics"
+
+  cs.CV:
+    name: "Computer Vision and Pattern Recognition"
+    description: "Image and video understanding"
+
+  cs.LG:
+    name: "Machine Learning"
+    description: "Papers on all aspects of machine learning"
+
+  cs.NE:
+    name: "Neural and Evolutionary Computing"
+    description: "Neural networks, genetic algorithms, evolutionary computation"
+
+  cs.RO:
+    name: "Robotics"
+    description: "Roughly includes material in ACM Subject Class I.2.9"
+
+statistics:
+  stat.ML:
+    name: "Machine Learning (Statistics)"
+    description: "Statistical aspects of machine learning"
+
+  stat.ME:
+    name: "Methodology (Statistics)"
+    description: "Statistical methodology including machine learning methods"
+
+# Conferences and venues
+major_venues:
+  - "NeurIPS"
+  - "ICML"
+  - "ICLR"
+  - "CVPR"
+  - "ICCV"
+  - "ECCV"
+  - "ACL"
+  - "EMNLP"
+  - "NAACL"
+  - "AAAI"
+  - "IJCAI"
+  - "AISTATS"
+  - "KDD"
+  - "COLT"
+  - "UAI"
