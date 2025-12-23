@@ -1,0 +1,144 @@
+# Search Filters Configuration
+# Predefined filters for focused research queries
+
+# Filter by research topic
+topic_filters:
+  agents:
+    name: "AI Agents"
+    keywords: ["agent", "autonomous", "planning", "ReAct", "tool-using"]
+    categories: ["cs.AI", "cs.MA"]
+
+  generative_ai:
+    name: "Generative AI"
+    keywords: ["diffusion", "generation", "GAN", "VAE", "text-to-image"]
+    categories: ["cs.CV", "cs.LG"]
+
+  llm:
+    name: "Large Language Models"
+    keywords: ["LLM", "language model", "GPT", "transformer", "BERT"]
+    categories: ["cs.CL", "cs.AI"]
+
+  multimodal:
+    name: "Multimodal AI"
+    keywords: ["multimodal", "vision-language", "CLIP", "VLM"]
+    categories: ["cs.CV", "cs.CL"]
+
+  rag:
+    name: "RAG & Retrieval"
+    keywords: ["RAG", "retrieval", "semantic search", "dense retrieval"]
+    categories: ["cs.IR", "cs.CL"]
+
+  robotics:
+    name: "Robotics & Embodied AI"
+    keywords: ["robot", "embodied", "manipulation", "navigation"]
+    categories: ["cs.RO", "cs.AI"]
+
+# Filter by time period
+time_filters:
+  last_week:
+    name: "Last 7 Days"
+    days: 7
+
+  last_month:
+    name: "Last 30 Days"
+    days: 30
+
+  last_quarter:
+    name: "Last 90 Days"
+    days: 90
+
+  last_six_months:
+    name: "Last 180 Days"
+    days: 180
+
+  this_year:
+    name: "This Year (2024)"
+    start_date: "2024-01-01"
+
+# Filter by venue/quality
+venue_filters:
+  top_tier:
+    name: "Top Tier Conferences"
+    venues: ["NeurIPS", "ICML", "ICLR", "CVPR", "ICCV", "ACL", "EMNLP"]
+
+  vision:
+    name: "Computer Vision Venues"
+    venues: ["CVPR", "ICCV", "ECCV"]
+
+  nlp:
+    name: "NLP Venues"
+    venues: ["ACL", "EMNLP", "NAACL", "EACL"]
+
+  ml:
+    name: "Machine Learning Venues"
+    venues: ["NeurIPS", "ICML", "ICLR", "AISTATS"]
+
+  robotics:
+    name: "Robotics Venues"
+    venues: ["CoRL", "RSS", "ICRA", "IROS"]
+
+# Filter by citation count (impact)
+citation_filters:
+  highly_cited:
+    name: "Highly Cited (500+)"
+    min_citations: 500
+
+  influential:
+    name: "Influential (100+)"
+    min_citations: 100
+
+  popular:
+    name: "Popular (50+)"
+    min_citations: 50
+
+  emerging:
+    name: "Emerging (10+)"
+    min_citations: 10
+
+# Combo filters (pre-configured combinations)
+combo_filters:
+  trending_agents:
+    name: "Trending AI Agents Papers"
+    topics: ["agents"]
+    time: "last_month"
+    min_citations: 10
+
+  breakthrough_generative:
+    name: "Breakthrough Generative AI"
+    topics: ["generative_ai"]
+    time: "last_quarter"
+    min_citations: 100
+
+  recent_llm_advances:
+    name: "Recent LLM Advances"
+    topics: ["llm"]
+    time: "last_week"
+    venues: ["top_tier"]
+
+  hot_multimodal:
+    name: "Hot Multimodal Papers"
+    topics: ["multimodal"]
+    time: "last_month"
+    min_citations: 50
+
+# Sort options
+sort_options:
+  relevance:
+    name: "Most Relevant"
+    field: "score"
+    order: "desc"
+
+  recent:
+    name: "Most Recent"
+    field: "published_date"
+    order: "desc"
+
+  citations:
+    name: "Most Cited"
+    field: "citation_count"
+    order: "desc"
+
+  citation_velocity:
+    name: "Fastest Growing"
+    field: "citations_per_month"
+    order: "desc"

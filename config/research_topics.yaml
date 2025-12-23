@@ -1,0 +1,313 @@
+# Research Topics Configuration
+# Define research areas of interest for focused paper ingestion and queries
+
+# Hot research areas to track
+hot_topics:
+  agents:
+    name: "AI Agents & Autonomous Systems"
+    keywords:
+      - "autonomous agents"
+      - "agent planning"
+      - "tool-using agents"
+      - "ReAct"
+      - "agent frameworks"
+      - "LLM agents"
+      - "agent collaboration"
+      - "agent evaluation"
+    arxiv_categories: ["cs.AI", "cs.MA", "cs.LG"]
+    description: "Research on autonomous AI agents, planning, tool use, and agent frameworks"
+
+  multi_agent:
+    name: "Multi-Agent Systems"
+    keywords:
+      - "multi-agent systems"
+      - "agent communication"
+      - "cooperative agents"
+      - "multi-agent reinforcement learning"
+      - "MARL"
+      - "agent coordination"
+      - "swarm intelligence"
+      - "emergent behavior"
+    arxiv_categories: ["cs.MA", "cs.AI", "cs.LG"]
+    description: "Multiple agents working together, communication protocols, emergent behaviors"
+
+  generative_ai:
+    name: "Generative AI"
+    keywords:
+      - "generative models"
+      - "diffusion models"
+      - "stable diffusion"
+      - "DALL-E"
+      - "Midjourney"
+      - "text-to-image"
+      - "image-to-image"
+      - "video generation"
+      - "3D generation"
+      - "generative adversarial networks"
+      - "GANs"
+      - "variational autoencoders"
+      - "VAE"
+    arxiv_categories: ["cs.CV", "cs.LG", "cs.AI"]
+    description: "Image, video, 3D, and multimodal generation using diffusion and other methods"
+
+  llm_techniques:
+    name: "Large Language Model Techniques"
+    keywords:
+      - "in-context learning"
+      - "few-shot learning"
+      - "chain-of-thought"
+      - "CoT"
+      - "reasoning"
+      - "prompting techniques"
+      - "instruction tuning"
+      - "RLHF"
+      - "alignment"
+      - "constitutional AI"
+    arxiv_categories: ["cs.CL", "cs.LG", "cs.AI"]
+    description: "Advanced techniques for using and training large language models"
+
+  memory_systems:
+    name: "Memory & Context Management"
+    keywords:
+      - "memory networks"
+      - "external memory"
+      - "memory-augmented networks"
+      - "neural memory"
+      - "context windows"
+      - "long-term memory"
+      - "episodic memory"
+      - "semantic memory"
+      - "memory retrieval"
+      - "context management"
+    arxiv_categories: ["cs.AI", "cs.LG", "cs.NE"]
+    description: "Memory systems for AI, context management, and long-term information storage"
+
+  rag_retrieval:
+    name: "RAG & Retrieval Systems"
+    keywords:
+      - "retrieval-augmented generation"
+      - "RAG"
+      - "dense retrieval"
+      - "semantic search"
+      - "vector databases"
+      - "hybrid search"
+      - "re-ranking"
+      - "query understanding"
+      - "document retrieval"
+    arxiv_categories: ["cs.IR", "cs.CL", "cs.AI"]
+    description: "Retrieval systems, RAG architectures, and information retrieval techniques"
+
+  reasoning:
+    name: "AI Reasoning & Planning"
+    keywords:
+      - "reasoning"
+      - "logical reasoning"
+      - "commonsense reasoning"
+      - "symbolic reasoning"
+      - "neural-symbolic"
+      - "planning algorithms"
+      - "decision making"
+      - "problem solving"
+      - "causal reasoning"
+    arxiv_categories: ["cs.AI", "cs.LG", "cs.LO"]
+    description: "Reasoning capabilities, planning, and decision-making in AI systems"
+
+  multimodal:
+    name: "Multimodal AI"
+    keywords:
+      - "multimodal learning"
+      - "vision-language models"
+      - "CLIP"
+      - "Flamingo"
+      - "GPT-4V"
+      - "visual question answering"
+      - "image captioning"
+      - "video understanding"
+      - "audio-visual learning"
+    arxiv_categories: ["cs.CV", "cs.CL", "cs.LG"]
+    description: "Models that process and generate multiple modalities (text, image, audio, video)"
+
+  efficient_ai:
+    name: "Efficient & Scalable AI"
+    keywords:
+      - "model compression"
+      - "quantization"
+      - "pruning"
+      - "knowledge distillation"
+      - "efficient transformers"
+      - "mixture of experts"
+      - "MoE"
+      - "parameter-efficient fine-tuning"
+      - "LoRA"
+      - "QLoRA"
+      - "4-bit quantization"
+    arxiv_categories: ["cs.LG", "cs.AI", "cs.DC"]
+    description: "Making AI models smaller, faster, and more efficient"
+
+  embodied_ai:
+    name: "Embodied AI & Robotics"
+    keywords:
+      - "embodied AI"
+      - "robot learning"
+      - "sim-to-real"
+      - "manipulation"
+      - "navigation"
+      - "vision-language-action"
+      - "VLA models"
+      - "robot transformers"
+      - "imitation learning"
+    arxiv_categories: ["cs.RO", "cs.AI", "cs.LG"]
+    description: "AI systems that interact with physical or simulated environments"
+
+  safety_alignment:
+    name: "AI Safety & Alignment"
+    keywords:
+      - "AI safety"
+      - "alignment"
+      - "robustness"
+      - "adversarial examples"
+      - "interpretability"
+      - "explainability"
+      - "fairness"
+      - "bias mitigation"
+      - "red teaming"
+      - "jailbreaking"
+    arxiv_categories: ["cs.AI", "cs.LG", "cs.CY"]
+    description: "Making AI systems safe, aligned, and trustworthy"
+
+  foundation_models:
+    name: "Foundation Models"
+    keywords:
+      - "foundation models"
+      - "large language models"
+      - "LLM"
+      - "GPT"
+      - "Claude"
+      - "Llama"
+      - "Mistral"
+      - "Gemini"
+      - "scaling laws"
+      - "emergent abilities"
+    arxiv_categories: ["cs.CL", "cs.LG", "cs.AI"]
+    description: "Large-scale pretrained models and their properties"
+
+# Specific techniques and methods
+techniques:
+  prompting:
+    - "zero-shot prompting"
+    - "few-shot prompting"
+    - "chain-of-thought prompting"
+    - "tree of thoughts"
+    - "graph of thoughts"
+    - "self-consistency"
+    - "prompt engineering"
+    - "instruction following"
+
+  training:
+    - "supervised fine-tuning"
+    - "reinforcement learning from human feedback"
+    - "RLHF"
+    - "direct preference optimization"
+    - "DPO"
+    - "constitutional AI"
+    - "self-play"
+    - "curriculum learning"
+
+  architecture:
+    - "transformers"
+    - "attention mechanisms"
+    - "sparse attention"
+    - "flash attention"
+    - "rotary positional embeddings"
+    - "RoPE"
+    - "group query attention"
+    - "mixture of experts"
+
+# Emerging areas (cutting edge)
+emerging:
+  - name: "AI Agents with Tools"
+    keywords: ["function calling", "tool use", "API agents", "AutoGPT", "BabyAGI"]
+
+  - name: "World Models"
+    keywords: ["world models", "predictive models", "Gato", "generalist agents"]
+
+  - name: "Neurosymbolic AI"
+    keywords: ["neurosymbolic", "hybrid AI", "symbolic reasoning", "logic+neural"]
+
+  - name: "Open-Ended Learning"
+    keywords: ["open-ended learning", "curriculum generation", "auto-curriculum"]
+
+  - name: "AI for Science"
+    keywords: ["AI for science", "AlphaFold", "protein folding", "materials discovery"]
+
+  - name: "Continual Learning"
+    keywords: ["continual learning", "lifelong learning", "catastrophic forgetting"]
+
+  - name: "Meta-Learning"
+    keywords: ["meta-learning", "learning to learn", "few-shot adaptation", "MAML"]
+
+  - name: "Neural Architecture Search"
+    keywords: ["NAS", "AutoML", "architecture search", "neural architecture"]
+
+# Top conferences and venues to track
+top_venues:
+  tier1:
+    - "NeurIPS"
+    - "ICML"
+    - "ICLR"
+    - "ACL"
+    - "EMNLP"
+    - "CVPR"
+    - "ICCV"
+    - "ECCV"
+
+  tier2:
+    - "AAAI"
+    - "IJCAI"
+    - "NAACL"
+    - "EACL"
+    - "CoRL"
+    - "RSS"
+    - "AISTATS"
+
+  workshops:
+    - "NeurIPS Workshops"
+    - "ICML Workshops"
+    - "ICLR Workshops"
+
+# Influential researchers/labs to track
+research_groups:
+  academic:
+    - "Stanford NLP"
+    - "MIT CSAIL"
+    - "Berkeley AI Research"
+    - "CMU Machine Learning"
+    - "Oxford Deep Learning"
+    - "ETH AI Center"
+
+  industry:
+    - "OpenAI"
+    - "Google DeepMind"
+    - "Anthropic"
+    - "Meta AI Research"
+    - "Microsoft Research"
+    - "Mistral AI"
+    - "Cohere"
+    - "AI2 (Allen Institute)"
+
+# Time-based tracking
+tracking:
+  daily_check:
+    - "arXiv cs.AI"
+    - "arXiv cs.LG"
+    - "arXiv cs.CL"
+
+  weekly_digest:
+    - "All hot topics"
+    - "Top cited papers"
+    - "Trending keywords"
+
+  monthly_analysis:
+    - "Emerging trends"
+    - "Breakthrough papers"
+    - "Field evolution"
