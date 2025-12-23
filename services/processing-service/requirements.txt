@@ -1,0 +1,29 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Azure SDKs
+azure-servicebus==7.11.4
+azure-cosmos==4.5.1
+azure-storage-blob==12.19.0
+azure-identity==1.15.0
+
+# OpenAI
+openai==1.10.0
+
+# Vector Database
+qdrant-client==1.7.3
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.3
+
+# Logging & Monitoring
+python-json-logger==2.0.7
+opik==0.1.0
+
+# Utilities
+python-dotenv==1.0.0
+httpx==0.26.0
+tenacity==8.2.3  # For retries

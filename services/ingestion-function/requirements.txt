@@ -1,0 +1,9 @@
+# For local script (not Azure Function yet)
+requests==2.31.0
+python-dotenv==1.0.0
+feedparser==6.0.10
+httpx==0.26.0
+
+# For future Azure Function deployment
+# azure-functions==1.18.0
+# azure-servicebus==7.11.4

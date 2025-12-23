@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # Qdrant Vector Database
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__HTTP_PORT=6333
+      - QDRANT__SERVICE__GRPC_PORT=6334
+    networks:
+      - ai-research-network
+
+  # Processing Service
+  processing-service:
+    build:
+      context: ./services/processing-service
+      dockerfile: Dockerfile
+    container_name: processing-service
+    env_file:
+      - .env
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+    depends_on:
+      - qdrant
+    networks:
+      - ai-research-network
+
+  # RAG Query Service
+  rag-query-service:
+    build:
+      context: ./services/rag-query-service
+      dockerfile: Dockerfile
+    container_name: rag-query-service
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+    depends_on:
+      - qdrant
+    networks:
+      - ai-research-network
+
+  # API Gateway
+  api-gateway:
+    build:
+      context: ./services/api-gateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - RAG_SERVICE_URL=http://rag-query-service:8000
+    depends_on:
+      - rag-query-service
+    networks:
+      - ai-research-network
+
+  # Streamlit Frontend
+  frontend:
+    build:
+      context: ./services/frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      - RAG_SERVICE_URL=http://rag-query-service:8000
+      - PROCESSING_SERVICE_URL=http://processing-service:8000
+    depends_on:
+      - rag-query-service
+      - processing-service
+    networks:
+      - ai-research-network
+
+volumes:
+  qdrant_storage:
+
+networks:
+  ai-research-network:
+    driver: bridge
